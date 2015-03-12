@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BIOM - Устойчивое Развитие</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/actapp.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body>
+    <div id="boxed-layout">
+      <div id="start" class="container">
+
+        <!-- Navigation Bar Fixed-->
+        <div id="navbar-fixed" class="navbar navbar-default navbar-fixed-top unvisible" role="navigation">
+          <div class="container">
+            <ul class="nav navbar-nav nav-align-center">
+              <li role="presentation"><a href="#start" class="scrollto">Начало</a></li>
+              <li role="presentation"><a href="#scheme1" class="scrollto">Схема УР</a></li>
+              <li role="presentation"><a href="#scheme2" class="scrollto">Схема "Чаша в лесу"</a></li>
+              <li role="presentation"><a href="#scheme3" class="scrollto">Схема "Пойма реки"</a></li>
+              <li role="presentation"><a href="#scheme4" class="scrollto">Схема "Ярусы"</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Page Header -->
+        <div class="page-header">
+          <h1 class="text-center">Устойчивое Развитие</h1>
+
+          <!-- Navigation Bar -->
+          <ul class="nav nav-pills nav-align-center">
+            <li role="presentation"><a href="#scheme1" class="scrollto">Схема УР</a></li>
+            <li role="presentation"><a href="#scheme2" class="scrollto">Схема "Чаша в лесу"</a></li>
+            <li role="presentation"><a href="#scheme3" class="scrollto">Схема "Пойма реки"</a></li>
+            <li role="presentation"><a href="#scheme4" class="scrollto">Схема "Ярусы"</a></li>
+          </ul>
+        </div>
+
+        <div id="scheme1" class="gap ancor" style="height: 20px;"></div>
+
+        <!-- Scheme Sustainable Development -->
+
+        <div id="scheme2" class="gap ancor" style="height: 20px;"></div>
+
+        <!-- Scheme Bowl in the Forest -->
+
+        <div id="scheme3" class="gap ancor" style="height: 20px;"></div>
+
+        <!-- Scheme Flood Plain -->
+
+        <div id="scheme4" class="gap ancor" style="height: 20px;"></div>
+
+        <!-- Scheme Tiers of the Forest -->
+
+        <div class="gap" style="height: 20px;"></div>
+
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Init. Navigation Scrolling -->
+    <script>
+      $(document).ready(function() {
+        $("a.scrollto").click(function () {
+          var elementClick = $(this).attr("href")
+          var destination = $(elementClick).offset().top;
+          jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
+          return false;
+        });
+      });
+    </script>
+    
+    <!-- Init. Navbar Fixed -->
+    <script>
+      $(document).ready(function(){
+        var $menu = $("#navbar-fixed");
+        $(window).scroll(function(){
+          if ( $(this).scrollTop() > 140 && $menu.hasClass("unvisible") ){
+              $menu.removeClass("unvisible").addClass("visible");
+          } else if($(this).scrollTop() <= 140 && $menu.hasClass("visible")) {
+              $menu.removeClass("visible").addClass("unvisible");
+          }
+        });//scroll
+      });
+    </script>
+  </body>
+</html>

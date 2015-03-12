@@ -1,0 +1,171 @@
+@font-face {
+    font-family: "BebasNeue";
+    font-style: normal;
+    font-weight: 300;
+    src: url(/fonts/BebasNeue_Light.eot);
+    src: local("Casper"), 
+         url(/fonts/BebasNeue_Light.woff) format("woff"),
+         url(/fonts/BebasNeue_Light.woff) format("woff"),
+         url(/fonts/BebasNeue_Light.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/BebasNeue_Regular.eot);
+    src: local("Casper"), 
+         url(/fonts/BebasNeue_Regular.woff) format("woff"),
+         url(/fonts/BebasNeue_Regular.woff) format("woff"),
+         url(/fonts/BebasNeue_Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/BebasNeue_Bold.eot);
+    src: local("Casper"), 
+    	 url(/fonts/BebasNeue_Bold.svg) format("svg"),
+         url(/fonts/BebasNeue_Bold.woff) format("woff"),
+         url(/fonts/BebasNeue_Bold.ttf) format("truetype");
+}
+
+#boxed-layout {
+	width: 1000px;
+	margin: 0px auto;
+	-webkit-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3);
+	  -moz-box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3);
+	    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 992px) {
+	#boxed-layout {
+		width: auto;
+		margin: 0 !important;
+		padding: 0 !important;
+		border: none;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		width: 970px;
+	}
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	font-family: BebasNeue, Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	/*color: #1d7192 !important;*/
+}
+
+.gap {
+	display: block;
+	width: 100%;
+	margin: 0;
+}
+
+.gap.ancor {
+	margin-bottom: 50px;
+	margin-top: -30px;
+}
+
+/* Navigation Bar */
+#navbar-fixed.unvisible {
+	display: none;
+}
+
+#navbar-fixed.visible {
+	display: block;
+}
+
+.nav-align-center {
+	width: 100%;
+	text-align: center;
+}
+
+.nav-align-center > li {
+	display:inline-block;
+	float: none;
+}
+
+/* Books Carosell */
+.books li {
+	height: 312px;
+}
+
+.books img {
+	position: absolute;
+	bottom: 0%;
+	
+	/*-moz-box-shadow: 0 0 5px #e8e8e8;
+	-webkit-box-shadow: 0 0 5px #e8e8e8;
+	box-shadow: 0 0 5px #e8e8e8;
+	filter: progid:DXImageTransform.Microsoft.Shadow(color='#e8e8e8', Direction=145, Strength=3);
+	border: 1px solid #e0e0e0;*/
+}
+
+/* Articles Table */
+th.field-date {
+	width: 12%;
+}
+
+th.field-tags {
+	width: 28%;
+}
+
+.pagination.articles {
+	margin: 0;
+}
+
+/* Pictures Gallery */
+#pictures-container .picture-wrap img { 
+	width: 140px; 
+}
+
+.picture-wrap {
+	float: left;
+	display: block;
+	margin-bottom: 20px;
+}
+
+/* Poems Carosell*/
+.poem-wrap {
+	background: #FFFFE0;
+	border: 1px solid #EEE9BF;
+}
+
+.poem-content {
+	height: 420px;
+	padding: 20px 10px 20px 40px;
+	overflow: auto;
+}
+
+.poem-content h1 {
+	margin: 0 0 20px 0;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 25px;
+}
+
+.poem-content p {
+	margin: 0 0 20px 0;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 17px;
+}
+
+.poem-content p:last-child {
+	margin: 0;
+}
+
+/* Cartoons Gallery */
+#cartoons-container .cartoon-wrap img { 
+	width: 140px; 
+}
+
+.cartoon-wrap {
+	float: left;
+	display: block;
+	margin-bottom: 20px;
+	outline: 1px solid #9E9E9E;
+}
