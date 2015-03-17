@@ -22,33 +22,11 @@
     <div id="boxed-layout">
       <div id="start" class="container">
 
-        <!-- Navigation Bar Fixed-->
-        <div id="navbar-fixed" class="navbar navbar-default navbar-fixed-top unvisible" role="navigation">
-          <div class="container">
-            <ul class="nav navbar-nav nav-align-center">
-              <li role="presentation"><a href="#start" class="scrollto">Начало</a></li>
-              <li role="presentation"><a href="#scheme1" class="scrollto">Схема УР</a></li>
-              <li role="presentation"><a href="#scheme2" class="scrollto">Схема "Чаша в лесу"</a></li>
-              <li role="presentation"><a href="#scheme3" class="scrollto">Схема "Пойма реки"</a></li>
-              <li role="presentation"><a href="#scheme4" class="scrollto">Схема "Ярусы"</a></li>
-            </ul>
-          </div>
-        </div>
-
         <!-- Page Header -->
         <div class="page-header">
           <h1 class="text-center">Устойчивое Развитие</h1>
 
-          <!-- Navigation Bar -->
-          <ul class="nav nav-pills nav-align-center">
-            <li role="presentation"><a href="#scheme1" class="scrollto">Схема УР</a></li>
-            <li role="presentation"><a href="#scheme2" class="scrollto">Схема "Чаша в лесу"</a></li>
-            <li role="presentation"><a href="#scheme3" class="scrollto">Схема "Пойма реки"</a></li>
-            <li role="presentation"><a href="#scheme4" class="scrollto">Схема "Ярусы"</a></li>
-          </ul>
-        </div>
-
-        <div id="scheme1" class="gap ancor" style="height: 0;"></div>
+        <div class="gap" style="height: 20px;"></div>
 
         <!-- Scheme Sustainable Development -->
 
@@ -61,17 +39,17 @@
           </div>
         </div>
 
-        <div id="scheme2" class="gap ancor" style="height: 20px;"></div>
+        <div class="gap" style="height: 20px;"></div>
 
         <!-- Scheme Bowl in the Forest -->
         <img src="https://s3.eu-central-1.amazonaws.com/biom/scheme-w940/climate-formation-regulation-scheme-w940.jpg" class="img-responsive" alt="Формирование и регуляция климата"/>
 
-        <div id="scheme3" class="gap ancor" style="height: 20px;"></div>
+        <div class="gap" style="height: 20px;"></div>
 
         <!-- Scheme Flood Plain -->
         <img src="https://s3.eu-central-1.amazonaws.com/biom/scheme-w940/floodplain-scheme-w940.jpg" class="img-responsive" alt="Пойма реки"/>
 
-        <div id="scheme4" class="gap ancor" style="height: 20px;"></div>
+        <div class="gap" style="height: 20px;"></div>
 
         <!-- Scheme Tiers of the Forest -->
         <div class="col-md-6">
@@ -94,30 +72,5 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- Init. Navigation Scrolling -->
-    <script>
-      $(document).ready(function() {
-        $("a.scrollto").click(function () {
-          var elementClick = $(this).attr("href")
-          var destination = $(elementClick).offset().top;
-          jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
-          return false;
-        });
-      });
-    </script>
-    
-    <!-- Init. Navbar Fixed -->
-    <script>
-      $(document).ready(function(){
-        var $menu = $("#navbar-fixed");
-        $(window).scroll(function(){
-          if ( $(this).scrollTop() > 140 && $menu.hasClass("unvisible") ){
-              $menu.removeClass("unvisible").addClass("visible");
-          } else if($(this).scrollTop() <= 140 && $menu.hasClass("visible")) {
-              $menu.removeClass("visible").addClass("unvisible");
-          }
-        });//scroll
-      });
-    </script>
   </body>
 </html>
